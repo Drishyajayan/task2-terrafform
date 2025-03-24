@@ -53,7 +53,7 @@ resource "aws_security_group" "jump_sg" {
   }
 }
 resource "aws_instance" "jump_host" {
-  ami             = "ami-0c55b159cbfafe1f0" 
+  ami             = "ami-0e35ddab05955cf57" 
   instance_type   = "t2.micro"
   subnet_id       = aws_subnet.public_subnet_1.id
   security_groups = [aws_security_group.jump_sg.id]
@@ -84,7 +84,7 @@ resource "aws_security_group" "ubuntu_sg" {
   }
 }
 resource "aws_instance" "ubuntu_server" {
-  ami             = "ami-0c55b159cbfafe1f0"
+  ami             = "ami-0e35ddab05955cf57"
   instance_type   = "t2.micro"
   subnet_id       = aws_subnet.private_subnet.id
   security_groups = [aws_security_group.ubuntu_sg.id]
